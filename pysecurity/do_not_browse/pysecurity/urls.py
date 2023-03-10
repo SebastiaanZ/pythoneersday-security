@@ -29,6 +29,7 @@ urlpatterns = [
     urls.path("eee/", urls.include("apps.eee_nostradamus.urls")),
     urls.path("fff/", urls.include("apps.fff_meegeren.urls")),
     urls.path("ggg/", urls.include("apps.ggg_priorities.urls")),
+    urls.path("hhh/", urls.include("apps.hhh_claims.urls")),
     urls.path(
         "favicon.ico",
         base.RedirectView.as_view(url=reverse_static("favicon.ico"), permanent=True),

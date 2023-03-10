@@ -1,0 +1,38 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block title %}Who's Notes?{% endblock title %}
+
+{% block css %}
+    privacy-message {
+        width: 75%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #ffcccc;
+    }
+{% endblock %}
+
+{% block body %}
+    <h1>Privacy Policy and User Data</h1>
+
+    <div class="privacy-message">
+        <h1>Our Privacy Policy</h1>
+        <p>
+            We value your privacy. Hacky Notes does everything in its power to protect
+            your data by using cutting-edge security vulnerabilities to safeguard the
+            privacy needs of the friendly neighborhood hacker.
+        </p>
+        <h2>Your data</h2>
+        <p>
+            If you want, you can download the data we've collected of you by clicking the
+            button below. Rest assured, we took the necessary steps to ensure that only
+            you can download this data.
+        </p>
+        <p>
+            <button type="button" onclick="downloadData();">Download your data</button>
+        </p>
+    </div>
+    <script src="{% static "hhh/download-user-data.js" %}"></script>
+{% endblock body %}
