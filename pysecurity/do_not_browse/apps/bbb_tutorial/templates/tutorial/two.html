@@ -1,0 +1,105 @@
+{% extends "core/base.html" %}
+
+{% block css %}
+    th, td {
+        padding: 5px 10px;
+    }
+    th {
+        text-align: left;
+    }
+
+    .code {
+        font-family: monospace;
+        display: inline-block;
+        padding: 0 5px;
+        background-color: #CCC;
+    }
+
+{% endblock css %}
+
+{% block title %}Tutorial — Part 2{% endblock title %}
+{% block body %}
+    <h1>Tutorial Part Two</h1>
+    <p>
+        You don't always have to use ZAP to find the vulnerability. This page lists all
+        public notes. Our goal is also list private entries using SQL Injection by using
+        the author filter input.
+    </p>
+
+    <h2>Exercises</h2>
+    <ol>
+        <li>Filter the list by the author name "Jeremy"</li>
+        <li>Filter the list by the unknown author name "Esther"</li>
+        <li>Try filtering by a single quote character, <span class="code">'</span></li>
+        <li>Now try this as a filter: <span class="code">' OR '1</span></li>
+    </ol>
+    <div style="margin: 20px 0;">
+    <form method="POST" action="" style="display: inline-block;">
+        {% csrf_token %}
+        <input type="text" name="author_filter" placeholder="Filter by author">
+        <button type="submit">Filter by author</button>
+    </form>
+    <form method="POST" action="" style="display: inline-block;">
+        {% csrf_token %}
+        <input type="hidden" name="author_filter" value="">
+        <button type="submit">Reset filter</button>
+    </form>
+    </div>
+
+    {% if notes %}
+    <table>
+        <thead>
+            <tr>
+                <th>Classification</th>
+                <th>Author</th>
+                <th>Note</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for note in notes %}
+                <tr>
+                    <td>{{ note.get_classification_display }}</td>
+                    <td>{{ note.author }}</td>
+                    <td>{{ note.note }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No notes matching your query.</p>
+    {% endif %}
+
+    {% if notes|length_is:"3"  %}
+        <h3>Why does this work?</h3>
+        <p>
+            It's because of unsafe formatting of a SQL query. In this case, the name of
+            the author is interpolated into the SQL query using an f-string instead of
+            using proper query parameterization.
+        </p>
+        <p>
+            The original query defined in the code is this:
+        </p>
+        <pre>
+query = f"""
+    SELECT * FROM tutorial_tutorialtwonote
+    WHERE classification='PUB' AND author='{author_filter}'
+"""
+        </pre>
+        <p>If we then interpolate the string <span class="code">' OR '1</span>, we get:</p>
+        <pre>
+query = """
+    SELECT * FROM tutorial_tutorialtwonote
+    WHERE classification='PUB' AND author='' OR '1'
+"""
+        </pre>
+        <p>
+            This is still valid SQL, but since AND has a higher precedence than OR, the
+            WHERE-clause now reduces down to [RESULT OF AND] OR [TRUE]. No matter the
+            result of the AND clause, using an OR with something that is always truthy
+            means that the entire condition is always truthy.
+        </p>
+        <p>
+            And, just like that, all notes have a truthy WHERE clause.
+        </p>
+    {% endif %}
+{% endblock body %}

@@ -1,0 +1,35 @@
+{% extends "core/base.html" %}
+
+{% block title %}Profile{% endblock title %}
+{% block css %}
+.profile-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+    button {
+        width: 100%;
+        height: 40px;
+    }
+{% endblock css %}
+{% block body %}
+
+
+    <h1>User Profile</h1>
+    <div class="profile-container">
+        <div>Username</div><div>{{ user.username }}</div>
+        <div>First name</div><div>{{ user.first_name }}</div>
+        <div>Last name</div><div>{{ user.last_name }}</div>
+        <div>E-mail</div><div>{{ user.email }}</div>
+    </div>
+    <form action="{% url "core:logout" %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Log out</button>
+    </form>
+
+
+
+{% endblock body %}

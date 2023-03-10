@@ -1,0 +1,101 @@
+{% extends "core/base.html" %}
+
+{% block css %}
+    th, td {
+        padding: 5px 10px;
+    }
+    th {
+        text-align: left;
+    }
+
+    .code {
+        font-family: monospace;
+        display: inline-block;
+        padding: 0 5px;
+        background-color: #CCC;
+    }
+
+    form {
+        width: 50%;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #ffcccc;
+
+    }
+
+    form h1 {
+        margin-top: 0;
+    }
+
+    .login-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .login-container .login-label {
+        display: flex;
+        font-size: 14pt;
+        font-weight: 700;
+        align-items: center;
+    }
+
+    .login-container .submit {
+
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+    }
+
+    input {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .error {
+        color: red;
+        font-weight: 700;
+    }
+
+{% endblock css %}
+
+
+{% block title %}Log In{% endblock title %}
+{% block body %}
+    <form action="" method="post">
+        <h1>Log In</h1>
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <p class="error">Authentication failed!</p>
+        {% endif %}
+
+        <div class="login-container">
+            <div class="login-label">
+                <label for="{{ form.username.id_for_label }}">Username:</label>
+            </div>
+            <div class="login-field">
+                 {{ form.username }}
+            </div>
+            <div class="login-label">
+                <label for="{{ form.password.id_for_label }}">Password:</label>
+            </div>
+            <div class="login-field">
+                 {{ form.password }}
+            </div>
+            <div>
+            </div>
+            <div class="login-field">
+                 {{ form.password.errors }}
+            </div>
+        </div>
+
+        <button type="submit">Log in!</button>
+
+    </form>
+
+{% endblock body %}

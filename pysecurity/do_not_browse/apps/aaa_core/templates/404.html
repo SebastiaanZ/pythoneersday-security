@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+{% block title %}Not found{% endblock title %}
+{% block body %}
+    <h1>Oops!</h1>
+    <p>We can't seem to find the page you're looking for.</p>
+    <p>If you feel that this is an error, please try logging out and logging back in again.</p>
+
+    <form action="{% url "core:logout" %}" method="post">
+        {% csrf_token %}
+        <p><button type="submit" style="display: inline-block;">Log out</button> or <a href="{% url "core:index" %}" target="_self">Take me back to the index page</a></p>
+    </form>
+
+{% endblock body %}

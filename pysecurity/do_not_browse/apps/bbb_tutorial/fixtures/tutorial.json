@@ -1,0 +1,29 @@
+[
+{
+    "model": "tutorial.tutorialtwonote",
+    "pk": 1,
+    "fields": {
+        "classification": "PUB",
+        "note": "This is a very public note!",
+        "author": "Sebastiaan"
+    }
+},
+{
+    "model": "tutorial.tutorialtwonote",
+    "pk": 2,
+    "fields": {
+        "classification": "PRI",
+        "note": "This note was supposed to be private... You've completed the tutorial!",
+        "author": "Esther"
+    }
+},
+{
+    "model": "tutorial.tutorialtwonote",
+    "pk": 3,
+    "fields": {
+        "classification": "PUB",
+        "note": "Another very public note. There's nothing special here...",
+        "author": "Jeremy"
+    }
+}
+]

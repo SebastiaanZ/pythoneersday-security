@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+
+{% block title %}Who's Notes?{% endblock title %}
+{% block css %}
+h4 {
+    margin: 0px;
+}
+{% endblock %}
+
+{% block body %}
+<h1>Your Private Notes</h1>
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="hidden" name="user_id" value="{{ user.pk }}">
+    <label for="id_note">Search note text: </label> <input type="text" id="id_note" name="query" placeholder="Search note text">
+    <button type="submit">Search</button>
+</form>
+    {% for note in notes %}
+
+        <h2>Note {{ forloop.counter }}</h2>
+        <ul>
+            <li>Author: {{ note.author }}</li>
+            <li>Date: {{ note.created_at }}</li>
+        </ul>
+        <h4>Text:</h4>
+        {{ note.note|linebreaks }}
+
+        {% if not forloop.last %}
+            <hr>
+        {% endif %}
+    {% empty %}
+        <p>No notes matching your query.</p>
+    {% endfor %}
+{% endblock body %}

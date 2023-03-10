@@ -1,0 +1,38 @@
+[
+{
+    "model": "simple_sql_injection.privatenoteddd",
+    "pk": 1,
+    "fields": {
+        "author": 1,
+        "created_at": "1979-10-12T09:42:42Z",
+        "note": "Simple. I got very bored and depressed, so I went and plugged myself in to its external computer feed. I talked to the computer at great length and explained my view of the Universe to it,\" said Marvin.\n\n\"And what happened?\" pressed Ford.\n\n\"It committed suicide,\" said Marvin and stalked off back to the Heart of Gold."
+    }
+},
+{
+    "model": "simple_sql_injection.privatenoteddd",
+    "pk": 2,
+    "fields": {
+        "author": 1,
+        "created_at": "2023-05-26T12:01:02Z",
+        "note": "The first ten million years were the worst,\" said Marvin, \"and the second ten million years, they were the worst too. The third ten million years I didn't enjoy at all. After that I went into a bit of a decline."
+    }
+},
+{
+    "model": "simple_sql_injection.privatenoteddd",
+    "pk": 3,
+    "fields": {
+        "author": 1,
+        "created_at": "1969-07-20T23:08:07Z",
+        "note": "Why should I want to make anything up? Life's bad enough as it is without wanting to invent any more of it."
+    }
+},
+{
+    "model": "simple_sql_injection.privatenoteddd",
+    "pk": 4,
+    "fields": {
+        "author": 2,
+        "created_at": "1977-01-11T11:08:07Z",
+        "note": "Ford! There's an infinite number of monkeys outside who want to talk to us about this script for Hamlet they've worked out.\n\n\n\nThat's it, you've got! Secret code: arthur-and-the-infinite-monkeys"
+    }
+}
+]

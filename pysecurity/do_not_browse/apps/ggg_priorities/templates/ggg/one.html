@@ -1,0 +1,57 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block title %}Who's Notes?{% endblock title %}
+
+{% block css %}
+    #priority-notes {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 6fr;
+        gap: 30px 10px;
+        margin-bottom: 20px;
+    }
+
+    #priority-notes .header {
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+
+    #priority-notes p {
+        grid-column: 1 / 7;
+    }
+
+    .low {
+        background-color: lightgreen;
+    }
+
+    .medium {
+        background-color: lightyellow;
+    }
+
+    .high {
+        background-color: darkred;
+        color: white;
+    }
+{% endblock %}
+
+{% block body %}
+    <h1>Your Prioritized Notes</h1>
+
+    <p>
+    <select id="priority-select">
+          <option selected value=""> -- Do not filter by priority -- </option>
+          <option value="L">Low</option>
+          <option value="M">Medium</option>
+          <option value="H">High</option>
+    </select>
+    <button type="button" onclick="fetchNotes();">Filter by selected priority</button>
+    </p>
+
+    <div id="priority-notes">
+        <p>Loading notes...</p>
+    </div>
+
+    <script src="{% static "ggg/priority-notes.js" %}"></script>
+{% endblock body %}

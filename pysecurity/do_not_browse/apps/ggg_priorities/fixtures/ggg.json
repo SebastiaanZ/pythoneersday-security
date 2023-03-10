@@ -1,0 +1,92 @@
+[
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 1,
+        "fields": {
+            "author": 2,
+            "note": "If you can approach the world's complexities, both its glories and its horrors, with an attitude of humble curiosity, acknowledging that however deeply you have seen, you have only scratched the surface, you will find worlds within worlds, beauties you could not heretofore imagine, and your own mundane preoccupations will shrink to proper size, not all that important in the greater scheme of things.\n\n\n\nThat's it!\n\n\n\nYour secret code: daniel-dennetts-dangerous-idea",
+            "priority": "H"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 2,
+        "fields": {
+            "author": 1,
+            "note": "What you can imagine depends on what you know.",
+            "priority": "L"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 3,
+        "fields": {
+            "author": 1,
+            "note": "The reading of all good books is like conversation with the finest men of past centuries.",
+            "priority": "M"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 4,
+        "fields": {
+            "author": 1,
+            "note": "Be less curious about people and more curious about ideas.",
+            "priority": "L"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 5,
+        "fields": {
+            "author": 1,
+            "note": "The original question, 'Can machines think?' I believe to be too meaningless to deserve discussion.",
+            "priority": "L"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 6,
+        "fields": {
+            "author": 1,
+            "note": "Data abstractions provide the same benefits as procedures, but for data. Recall that the main idea is to separate what an abstraction is from how it is implemented so that implementations of the same abstraction can be substituted freely.",
+            "priority": "H"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 7,
+        "fields": {
+            "author": 1,
+            "note": "The question of whether a computer can think is no more interesting than the question of whether a submarine can swim.",
+            "priority": "M"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 8,
+        "fields": {
+            "author": 1,
+            "note": "Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better.",
+            "priority": "M"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 9,
+        "fields": {
+            "author": 1,
+            "note": "What if Guido was hit by a bus?",
+            "priority": "L"
+        }
+    },
+    {
+        "model": "priorities.prioritizednotes",
+        "pk": 10,
+        "fields": {
+            "author": 1,
+            "note": "Arguing with anonymous strangers on the Internet is a sucker's game because they almost always turn out to be—or to be indistinguishable from—self-righteous sixteen-year-olds possessing infinite amounts of free time.",
+            "priority": "H"
+        }
+    }
+]

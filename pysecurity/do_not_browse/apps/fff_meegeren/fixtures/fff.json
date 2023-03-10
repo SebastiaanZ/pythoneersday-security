@@ -1,0 +1,38 @@
+[
+{
+    "model": "meegeren.privatenotefff",
+    "pk": 1,
+    "fields": {
+        "author": 1,
+        "created_at": "1979-10-12T09:42:42Z",
+        "note": "A painter should begin every canvas with a wash of black, because all things in nature are dark except where exposed by the light."
+    }
+},
+{
+    "model": "meegeren.privatenotefff",
+    "pk": 2,
+    "fields": {
+        "author": 2,
+        "created_at": "2023-05-26T12:01:02Z",
+        "note": "Close friends are truly life's treasures. Sometimes they know us better than we know ourselves. With gentle honesty, they are there to guide and support us, to share our laughter and our tears. Their presence reminds us that we are never really alone.\n\n\n\nThat's right! This view doesn't verify the token signature...\n\nThe secret code: van-gogh-and-his-friends"
+    }
+},
+{
+    "model": "meegeren.privatenotefff",
+    "pk": 3,
+    "fields": {
+        "author": 1,
+        "created_at": "1969-07-20T23:08:07Z",
+        "note": "Are you really sure that a floor can't also be a ceiling?"
+    }
+},
+{
+    "model": "meegeren.privatenotefff",
+    "pk": 4,
+    "fields": {
+        "author": 1,
+        "created_at": "1977-01-11T11:08:07Z",
+        "note": "The world doesn't make sense, so why should I paint pictures that do?"
+    }
+}
+]

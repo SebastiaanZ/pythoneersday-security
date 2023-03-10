@@ -1,0 +1,38 @@
+[
+{
+    "model": "nostradamus.privatenoteeee",
+    "pk": 1,
+    "fields": {
+        "author": 1,
+        "created_at": "1979-10-12T09:42:42Z",
+        "note": "Nothing in the world can one imagine beforehand, not the least thing, everything is made up of so many unique particulars that cannot be forseen."
+    }
+},
+{
+    "model": "nostradamus.privatenoteeee",
+    "pk": 2,
+    "fields": {
+        "author": 2,
+        "created_at": "2023-05-26T12:01:02Z",
+        "note": "Reading furnishes the mind only with materials of knowledge; it is thinking that makes what we read ours.\n\n\n\nThat's right! This URL bypasses authentication and authorization...\n\nThe secret code: john-locke-thought-about-thinking-how-meta"
+    }
+},
+{
+    "model": "nostradamus.privatenoteeee",
+    "pk": 3,
+    "fields": {
+        "author": 1,
+        "created_at": "1969-07-20T23:08:07Z",
+        "note": "Mankind will discover objects in space sent to us by the watchers..."
+    }
+},
+{
+    "model": "nostradamus.privatenoteeee",
+    "pk": 4,
+    "fields": {
+        "author": 1,
+        "created_at": "1977-01-11T11:08:07Z",
+        "note": "Will the future bring your wisdom to me?"
+    }
+}
+]

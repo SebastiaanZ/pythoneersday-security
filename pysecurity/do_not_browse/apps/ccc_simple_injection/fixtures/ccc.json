@@ -1,0 +1,38 @@
+[
+{
+    "model": "simple_injection.privatenote",
+    "pk": 1,
+    "fields": {
+        "author": 1,
+        "created_at": "1979-10-12T09:42:42Z",
+        "note": "Curiously enough, the only thing that went through the mind of the bowl of petunias as it fell was Oh no, not again. Many people have speculated that if we knew exactly why the bowl of petunias had thought that we would know a lot more about the nature of the Universe than we do now."
+    }
+},
+{
+    "model": "simple_injection.privatenote",
+    "pk": 2,
+    "fields": {
+        "author": 1,
+        "created_at": "2023-05-26T12:01:02Z",
+        "note": "Time is an illusion. Lunchtime doubly so."
+    }
+},
+{
+    "model": "simple_injection.privatenote",
+    "pk": 3,
+    "fields": {
+        "author": 1,
+        "created_at": "1969-07-20T23:08:07Z",
+        "note": "Beautiful, beautiful. Magnificent desolation."
+    }
+},
+{
+    "model": "simple_injection.privatenote",
+    "pk": 4,
+    "fields": {
+        "author": 2,
+        "created_at": "1977-01-11T11:08:07Z",
+        "note": "It's at times like this, when I'm trapped in a Vogon airlock with a man from Betelgeuse, and about to die of asphyxiation in deep space that I really wish I'd listened to what my mother told me when I was young.\n\n\n\nThat's it, you've got! Secret code: arthur-did-not-listen"
+    }
+}
+]

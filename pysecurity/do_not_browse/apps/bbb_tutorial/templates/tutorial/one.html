@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+
+{% block title %}Tutorial — Part 1{% endblock title %}
+{% block body %}
+<h1>Tutorial Part One</h1>
+<h2>Exercises</h2>
+<ol>
+    <li>Set a breakpoint in ZAP that will intercept traffic from this page.</li>
+    <li>Press the button below.</li>
+    <li>Use ZAP to change the value of `username` in the request payload to something other than "sebastiaan".</li>
+    <li>Check the result.</li>
+</ol>
+<div style="margin: 20px 0;">
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="hidden" name="username" value="sebastiaan">
+    <button type="submit">Make POST request</button>
+</form>
+</div>
+{% if posted_value %}
+    <p id="result-message">
+        {% if status == "success" %}
+            That's right! You posted '{{ posted_value }}'.
+        {% else %}
+            Something went wrong, the value of username is still '{{ posted_value }}'.
+        {% endif %}
+    </p>
+{% endif %}
+    {% if status == "success" %}
+        <p><button type="button" onclick="location.href='{% url 'tutorial:two' %}';">Go to part two!</button></p>
+    {% endif %}
+{% endblock body %}

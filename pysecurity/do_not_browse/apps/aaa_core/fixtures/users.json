@@ -1,0 +1,38 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$RNbpAFucgbN6msNtqXokoy$2WCblpl/PPA+RdYNlCMAWobStjhgctFZcLKLQPBTjSA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "marvin",
+        "first_name": "Marvin",
+        "last_name": "Adams",
+        "email": "marvin@paranoid-android.ordina",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-09T17:03:48.968Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$WXwxgIj1PYL1MsUX3qPSbe$82EY/3JmfXT910WvJiceMSrKdKo7jQCP6N3gb5D/xzM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "arthur",
+        "first_name": "Arthur",
+        "last_name": "Dent",
+        "email": "arthur@earthling.pythoneers.ordina",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-03-09T17:07:33.163Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

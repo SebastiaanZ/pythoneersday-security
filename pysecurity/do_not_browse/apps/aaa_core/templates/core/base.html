@@ -1,0 +1,194 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>{% block title %}Security Workshop{% endblock title %}</title>
+    <meta name="description" content="HTML5">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    {% block extra_js %}
+    {% endblock extra_js %}
+    <style>
+    html {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+        min-height: 100%;
+    }
+
+    main {
+        padding: 0 10px;
+        height: 100%;
+    }
+
+    body .content-container {
+        max-width: 760px;
+        font-size: 16pt;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2 {
+        font-size: 22pt;
+    }
+
+    h3 {
+        font-size: 20pt;
+    }
+
+    h4 {
+        font-size: 18pt;
+    }
+
+
+    li {
+        padding-bottom: 1rem;
+    }
+
+    hr.error-separator {
+        margin-top: 30px;
+    }
+
+    pre {
+        overflow-x:scroll;
+    }
+    .db-error > pre {
+        font-size: 10pt;
+        font-family: monospace;
+        padding: 10px 0;
+    }
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 75px;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
+        background-color: lightblue;
+        padding: 0 10px 5px 10px;
+        margin-bottom: 1rem;
+        border-radius: 0 0 15px 15px;
+
+    }
+
+    .nav .title {
+        grid-area: 1 / 1 / 2 / 4;
+        font-size: 3rem;
+        align-items: center;
+        display: flex;
+        font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+        font-weight: 600;
+    }
+
+    .nav .avatar-cell {
+        grid-area: 1 / 4 / 2 / 6;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .avatar {
+        aspect-ratio: 1;
+        height: 75%;
+        margin-left: 10px;
+
+    }
+
+    .index-link {
+        font-size: 12pt;
+        color: darkblue;
+    }
+
+    {% block css %}
+    {% endblock css %}
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+
+        <div class="nav">
+            <div class="title">
+                Hacky Notes
+            </div>
+            <div class="avatar-cell">
+                <span>
+                {% if user.is_authenticated  %}{{ user.username }}{% else %}Anonymous{% endif %}
+                </span>
+
+
+                <div class="avatar">
+
+                    <a href="{% if user.is_authenticated %}{% url "core:profile" %}{% else %}{% url "core:login" %}{% endif %}" target="_self">
+
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0{fill:#FAC1B8;}
+                        .st1{fill:#A0D7C2;}
+                    </style>
+                    <g>
+                        <path class="st0" d="M256,488c-61.97,0-120.23-24.13-164.05-67.95C48.13,376.23,24,317.97,24,256
+                            c0-61.97,24.13-120.23,67.95-164.05C135.77,48.13,194.03,24,256,24c61.97,0,120.23,24.13,164.05,67.95
+                            C463.87,135.77,488,194.03,488,256c0,61.97-24.13,120.23-67.95,164.05S317.97,488,256,488z"/>
+                        <path d="M256,48c55.56,0,107.79,21.64,147.08,60.92S464,200.44,464,256s-21.64,107.79-60.92,147.08S311.56,464,256,464
+                            s-107.79-21.64-147.08-60.92S48,311.56,48,256s21.64-107.79,60.92-147.08S200.44,48,256,48 M256,0C114.62,0,0,114.62,0,256
+                            s114.62,256,256,256s256-114.62,256-256S397.38,0,256,0L256,0z"/>
+                    </g>
+                    <g>
+                        <path class="st1" d="M256,475c-53.17,0-103.3-16.78-145.46-48.6c4.02-41.59,20.33-79.9,46.34-108.55
+                            c27.11-29.86,62.31-46.3,99.12-46.3c36.8,0,72,16.44,99.12,46.3c26.01,28.64,42.32,66.96,46.34,108.55
+                            C359.3,458.22,309.17,475,256,475z"/>
+                        <path d="M256,285.56c32.81,0,64.33,14.81,88.76,41.71c22.35,24.61,36.95,57.08,41.85,92.63c-16.63,11.65-34.66,20.99-53.77,27.83
+                            C308.24,456.53,282.39,461,256,461s-52.24-4.47-76.84-13.27c-19.11-6.84-37.14-16.18-53.77-27.83
+                            c4.91-35.54,19.5-68.01,41.85-92.63C191.67,300.37,223.19,285.56,256,285.56 M256,257.56c-84.64,0-153.97,77.28-160.01,175.26
+                            C139.82,467.96,195.45,489,256,489s116.18-21.04,160.01-56.18C409.97,334.84,340.64,257.56,256,257.56L256,257.56z"/>
+                    </g>
+                    <g>
+                        <circle class="st1" cx="256" cy="207.5" r="108.33"/>
+                        <path d="M256,113.17c52.01,0,94.33,42.31,94.33,94.33s-42.31,94.33-94.33,94.33s-94.33-42.31-94.33-94.33S203.99,113.17,256,113.17
+                             M256,85.17c-67.56,0-122.33,54.77-122.33,122.33S188.44,329.83,256,329.83s122.33-54.77,122.33-122.33S323.56,85.17,256,85.17
+                            L256,85.17z"/>
+                    </g>
+                    </svg>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <main>
+        {%  if request.path != "/" %}
+            <a href="{% url "core:index" %}" target="_self" class="index-link"> &lt; Take me back to the index</a>
+        {% endif %}
+
+        {% block body %}
+        {% endblock body %}
+
+        {% if db_error %}
+        <hr class="error-separator">
+        <div class="db-error">
+            <h3>Oops! A database error occurred:</h3>
+            <pre>
+{{ db_error }}
+            </pre>
+        </div>
+    {% endif %}
+
+                {%  if request.path != "/" %}
+            <a href="{% url "core:index" %}" target="_self" class="index-link"> &lt; Take me back to the index</a>
+        {% endif %}
+        </main>
+    </div>
+</body>
+</html>

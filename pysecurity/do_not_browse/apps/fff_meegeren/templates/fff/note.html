@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+
+{% block title %}Who's Notes?{% endblock title %}
+{% block css %}
+h4 {
+    margin: 0px;
+}
+
+.notes-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+{% endblock %}
+
+{% block body %}
+    <h1>Private Note</h1>
+    <ul>
+        <li>Note ID: {{ note.pk }}</li>
+        <li>Author: {{ note.author }}</li>
+        <li>Date: {{ note.created_at }}</li>
+    </ul>
+    <hr>
+    {{ note.note|linebreaks }}
+    <hr>
+    <p>
+        <a href="{% url "fff:one" %}"  target="_self">Back to your private notes overview.</a>
+    </p>
+{% endblock body %}
