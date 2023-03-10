@@ -69,7 +69,10 @@ class DownloadUserData(mixins.LoginRequiredMixin, generic.View):
 
         match token_user_id:
             case 1:
-                text = "Marvin's user data. This is not what you're looking for."
+                text = (
+                    "Marvin's user data.\n\nThis is not the Paranoid Android you're"
+                    " looking for."
+                )
                 file = io.BytesIO(text.encode("utf-8"))
             case 2:
                 text = (
